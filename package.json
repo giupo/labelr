@@ -1,6 +1,6 @@
 {
   "name": "labelr",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A really awesome way to manage labels for github users",
   "repository": {
     "type": "git",
