@@ -1,3 +1,4 @@
+import app from 'ampersand-app';
 import Router from 'ampersand-router';
 import PublicPage from './pages/public';
 import ReposPage from './pages/repos';
@@ -11,6 +12,7 @@ export default Router.extend({
 	},
   
   public () {
+    app.trigger('hello', {data:'ciccio'});
     React.render(<PublicPage/>, document.body);
   },
 
