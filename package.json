@@ -1,6 +1,6 @@
 {
   "name": "labelr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A really awesome way to manage labels for github users",
   "main": "index.js",
   "scripts": {
