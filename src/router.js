@@ -2,13 +2,17 @@ import app from 'ampersand-app';
 import Router from 'ampersand-router';
 import PublicPage from './pages/public';
 import ReposPage from './pages/repos';
+import PippoPage from './pages/pippo';
 import React from 'react';
+import HomePage from './pages/home';
 
 export default Router.extend({
   routes: {
     '': 'public',
     'repos': 'repos',
-    'titto' : 'test1'
+    'otherpage': 'otherpage',
+    'login' : 'login',
+    'logout' : 'logout'
 	},
   
   public () {
@@ -19,8 +23,16 @@ export default Router.extend({
   repos () {
     React.render(<ReposPage/>, document.body);
   },
-  
-  test1 () {
-    console.log('on test page');
+
+  otherpage() {
+    React.render(<PippoPage/>, document.body);
+  },
+
+  login() {
+    React.render(<HomePage/>, document.body);
+  },
+
+  logout() {
+    app.router.history.navigate('/');
   }
 });

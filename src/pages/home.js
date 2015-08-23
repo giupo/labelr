@@ -2,11 +2,11 @@ import app from 'ampersand-app';
 import React from 'react';
 
 export default React.createClass({
-  displayName : 'PublicPage',
+  displayName : 'HomePage',
 
-  onLoginClick (event) {
+  onLogoutClick (event) {
     event.preventDefault();
-    app.router.history.navigate('/login');
+    app.router.history.navigate('/logout');
   },
   
   render () {
@@ -17,8 +17,8 @@ export default React.createClass({
           </header>
           <div>
            <p>We label stuff for you, beacuse, we can &trade;</p>
-              <a href='/login' onClick={this.onLoginClick} className='button button-large'>
-                <span className='mega octicon octicon-mark-github'></span> Login with Github
+              <a href='/logout' onClick={this.onLogoutClick} className='button button-large'>
+                <span className='mega octicon octicon-mark-github'></span> Logged in with Github
               </a>
           </div>
         </div>
